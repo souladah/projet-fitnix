@@ -127,3 +127,101 @@ button {
     margin-bottom: 25px;
 }
 
+
+.table-card {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.table-card th,
+.table-card td {
+    padding: 13px 10px;
+    text-align: center;
+    border-bottom: 1px solid #303030; 
+}
+
+.table-card th {
+    color:#FFE14D;
+    background-color: #222222;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.table-card td:first-child {
+    color: #A5A5A5;
+    text-align: left;
+}
+
+.table-card td {
+    color:  #FFFFFF; 
+}
+
+.table-card tr:hover td {
+    background-color: #202020;
+}
+
+
+
+.student-paragraphe {
+    color: #A5A5A5;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.8;
+
+    padding-left: 16px;
+    border-left: 3px solid  #FFE14D; 
+}
+
+.carroussel-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+
+    min-width: 0;
+}
+
+.carousel-image {
+    position: relative;
+    min-width: 0;
+    min-height: 300px;
+
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #252525;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.carousel-image:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-image figcaption {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+
+    padding: 7px 14px;
+
+    background-color:  #FFE14D;
+    color:  #0E0E0E; 
+
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
