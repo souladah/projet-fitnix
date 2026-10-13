@@ -26,3 +26,28 @@ body {
 .prin {
     max-width: 600px;
 }
+
+.about-label {
+    color: #FFD93B;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.big-title h1 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.big-title > p:not(.about-label) {
+    color: #b5b5b5;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
