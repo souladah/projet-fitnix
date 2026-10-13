@@ -32,3 +32,10 @@ ul {
     font-weight: 700;
     margin-bottom: 16px;
 }
+.section-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
