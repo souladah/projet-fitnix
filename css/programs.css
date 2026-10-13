@@ -44,3 +44,10 @@ ul {
     max-width: 1400px;
     margin: 0 auto;
 }
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 50px;
+}
