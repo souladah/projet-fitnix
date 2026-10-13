@@ -3,7 +3,7 @@ h1{
     margin-top: 5px;
     font-size:85px;
     color: aliceblue;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Anton', sans-serif;
 }
 p{
     color: aliceblue;
@@ -51,20 +51,32 @@ body{
 
 .droite-main{
     display : flex;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
     padding: 5px;
+    
 }
 
 .texte-droite-top {
-    display: flex;
-    justify-content: end;
     width: 100%;
     color: aliceblue;
     padding: 10px;
+    margin-bottom: 200px;
+    margin-left: 300px;
+}
+.texte-droite-year{
+    color:#FFE14D;
+    font-size: 200px;
+    
+}
+.border-text-droite{
     border-left: 2px solid #58585f ;
+    padding: 15px;
 }
 
 .texte-droite-bas{
-    align-items: end;
+    width: 50%;
+    margin-top: 70px;
+    margin-left: 100px;
 }
