@@ -57,3 +57,8 @@ ul {
     font-size: 14px;
     line-height: 1.6;
 }
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
