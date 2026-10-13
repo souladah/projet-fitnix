@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    padding: 60px 40px;
+}
+
+.About {
+    display: flex;
+    gap: 20px;
+}
+
+.image img {
+    object-fit: cover;
+    display: block;
+    width: 500px;
+    height: 100%;
+}
+
+.prin {
+    max-width: 600px;
+}
