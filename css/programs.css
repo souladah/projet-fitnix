@@ -39,3 +39,8 @@ ul {
     text-transform: uppercase;
     letter-spacing: -1px;
 }
+.programs-section {
+    padding: 80px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
