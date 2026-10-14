@@ -146,3 +146,27 @@ ul {
     margin: 20px auto 30px;
     line-height: 1.6;
 }
+.pricing-toggle {
+    display: inline-flex;
+    background: #2a2a2a;
+    border-radius: 50px;
+    padding: 4px;
+    gap: 4px;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    color: #a0a0a0;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.toggle-btn.active {
+    background: #f4d03f;
+    color: #000;
+}
