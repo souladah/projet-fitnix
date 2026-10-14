@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/gallery.css"> 
+    <link rel="stylesheet" href="./css/gallery.css">
+    <script src="./js/script.js" defer></script> 
     <title>Document</title>
 </head>
 <body>
@@ -20,11 +21,14 @@
                 </div>
 
                 <div class="section-buttons">
-                    <button type="button" class="btn"><svg viewBox="-6.48 -6.48 36.96 36.96" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-6.48" y="-6.48" width="36.96" height="36.96" rx="18.48" fill="#0E0E0E" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 6V18M12 6L7 11M12 6L17 11" stroke="#FFE14D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
-                    <button type="button" class="btn"><svg viewBox="-3.6 -3.6 31.20 31.20" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(90)" stroke="#FFFFFF"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-3.6" y="-3.6" width="31.20" height="31.20" rx="15.6" fill="#FFE14D" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 6V18M12 6L7 11M12 6L17 11" stroke="#F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+                    <button type="button" class="btn prev"><svg viewBox="-6.48 -6.48 36.96 36.96" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-6.48" y="-6.48" width="36.96" height="36.96" rx="18.48" fill="#0E0E0E" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 6V18M12 6L7 11M12 6L17 11" stroke="#FFE14D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+                    <button type="button" class="btn next"><svg viewBox="-3.6 -3.6 31.20 31.20" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(90)" stroke="#FFFFFF"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-3.6" y="-3.6" width="31.20" height="31.20" rx="15.6" fill="#FFE14D" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 6V18M12 6L7 11M12 6L17 11" stroke="#F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
                 </div> 
             </div> 
-            <div></div>
+
+    <div class="carousel-viewport">
+        <div class="carousel-track">
+
             <div class="section-caroussel">
                 <div class="caroussel-card">  
                     <h2>LESLIE ALEXANDER</h3>
@@ -55,15 +59,13 @@
 
                     <p class="student-paragraphe" >
                         "I came in with zero confidence. Nine months <br> later I'm strong than I've ever been - and I<br> actually love training"
-                    </p>
-                   
-               
+                    </p>              
                 </div>   
 
                 <div class="carroussel-images">        
                
                     <figure class="carousel-image">
-                        <img >
+                        <img src="./image/LeslieAfter.png" >
                         <figcaption>BEFORE</figcaption> 
                     </figure>
 
@@ -73,7 +75,6 @@
                     </figure>
                
                 </div>  
-            </div>
             </div>
 
             <div class="section-caroussel">
@@ -113,67 +114,68 @@
 
             <div class="carroussel-images">
                 <figure class="carousel-image">
-                    <img src="./image/alex-before.jpg" alt="Alex Morgan before training">
+                    <img src="./image/AlexBEfore.png" alt="Alex Morgan before training">
                     <figcaption>BEFORE</figcaption>
                 </figure>
 
                 <figure class="carousel-image">
-                    <img src="./image/alex-after.jpg" alt="Alex Morgan after training">
+                    <img src="./image/AlexAfter.png" alt="Alex Morgan after training">
                     <figcaption>AFTER</figcaption>
                 </figure>
             </div>
-        </div>
-        <div class="section-caroussel">
+            </div>
+
+            <div class="section-caroussel">
+            <div class="caroussel-card">
+                <h2>SARAH BENNETT</h2>
+                <p>Age: 27 · Body Recomp Program</p>
+
+                <table class="table-card">
+                    <tr>
+                        <th>6 MONTHS</th>
+                        <th>BEFORE</th>
+                        <th>AFTER</th>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>75 Kg</td>
+                        <td>67 Kg</td>
+                    </tr>
+                    <tr>
+                        <td>Body Fat</td>
+                        <td>32%</td>
+                        <td>24%</td>
+                    </tr>
+                    <tr>
+                        <td>Bench Press</td>
+                        <td>20 Kg</td>
+                        <td>40 Kg</td>
+                    </tr>
+                </table>
+
+                <p class="student-paragraphe">
+                    "I started training to feel better about myself.
+                    Six months later, I'm more confident, stronger,
+                    and proud of every step I've taken."
+                </p>
+            </div>
+
+            <div class="carroussel-images">
+                <figure class="carousel-image">
+                    <img src="./image/SarahBefore.png" alt="Sarah Bennett before training">
+                    <figcaption>BEFORE</figcaption>
+                </figure>
+
+                <figure class="carousel-image">
+                    <img src="./image/SarahAfter.jpg" alt="Sarah Bennett after training">
+                    <figcaption>AFTER</figcaption>
+                </figure>
+            </div>
+            </div>
+
+            <div class="section-caroussel">
         <div class="caroussel-card">
-            <h2>SARAH BENNETT</h2>
-            <p>Age: 27 · Body Recomp Program</p>
-
-            <table class="table-card">
-                <tr>
-                    <th>6 MONTHS</th>
-                    <th>BEFORE</th>
-                    <th>AFTER</th>
-                </tr>
-                <tr>
-                    <td>Weight</td>
-                    <td>75 Kg</td>
-                    <td>67 Kg</td>
-                </tr>
-                <tr>
-                    <td>Body Fat</td>
-                    <td>32%</td>
-                    <td>24%</td>
-                </tr>
-                <tr>
-                    <td>Bench Press</td>
-                    <td>20 Kg</td>
-                    <td>40 Kg</td>
-                </tr>
-            </table>
-
-            <p class="student-paragraphe">
-                "I started training to feel better about myself.
-                Six months later, I'm more confident, stronger,
-                and proud of every step I've taken."
-            </p>
-        </div>
-
-        <div class="carroussel-images">
-            <figure class="carousel-image">
-                <img src="./image/sarah-before.jpg" alt="Sarah Bennett before training">
-                <figcaption>BEFORE</figcaption>
-            </figure>
-
-            <figure class="carousel-image">
-                <img src="./image/sarah-after.jpg" alt="Sarah Bennett after training">
-                <figcaption>AFTER</figcaption>
-            </figure>
-        </div>
-        </div>
-
-        <div class="section-caroussel">
-        <div class="caroussel-card">
-            <h2>DANIEL CARTER</h2>
+            <h2>JUN HO KIM</h2>
             <p>Age: 31 · Body Recomp Program</p>
 
             <table class="table-card">
@@ -208,17 +210,19 @@
 
         <div class="carroussel-images">
             <figure class="carousel-image">
-                <img src="./image/daniel-before.jpg" alt="Daniel Carter before training">
+                <img src="./image/JunHoKimBefore.png" alt="Daniel Carter before training">
                 <figcaption>BEFORE</figcaption>
             </figure>
 
             <figure class="carousel-image">
-                <img src="./image/daniel-after.jpg" alt="Daniel Carter after training">
+                <img src="./image/JunHoKimAfter.png" alt="Daniel Carter after training">
                 <figcaption>AFTER</figcaption>
             </figure>
         </div>
-    </div>
+            </div>
 
+        </div> 
+    </div>  
 
 
         </section>
@@ -236,11 +240,11 @@
                 </div>
 
                 <div class="testimonials-buttons">
-                    <button type="button" class="btn" >
+                    <button type="button" class="btn prev">
                         <svg viewBox="-6.48 -6.48 36.96 36.96" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-6.48" y="-6.48" width="36.96" height="36.96" rx="18.48" fill="#0E0E0E" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 6V18M12 6L7 11M12 6L17 11" stroke="#FFE14D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     </button>
 
-                    <button type="button" class="btn " > 
+                    <button type="button" class="btn next" > 
                        <svg viewBox="-3.6 -3.6 31.20 31.20" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(90)" stroke="#FFFFFF"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-3.6" y="-3.6" width="31.20" height="31.20" rx="15.6" fill="#FFE14D" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 6V18M12 6L7 11M12 6L17 11" stroke="#F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     </button>
                 </div>
@@ -248,7 +252,6 @@
             </div>
 
             <div class="testimonials-viewport">
-
                 <div class="testimonials-track">
 
                     <article class="testimonial-card">
@@ -336,7 +339,6 @@
                     </article>
 
                 </div>
-
             </div>
 
         </section>
