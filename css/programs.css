@@ -89,3 +89,10 @@ ul {
     object-fit: cover;
     z-index: 1;
 }
+.program-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
+    z-index: 2;
+}
