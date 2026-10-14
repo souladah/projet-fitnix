@@ -18,15 +18,12 @@ button {
     font-family: inherit;
 }
 
-
 .transformation-section {
     width: 100%;
     max-width: 1250px;
     margin: 0 auto;
     padding: 80px 30px;
 }
-
-
 
 .section-header {
     display: flex;
@@ -63,6 +60,7 @@ button {
     gap: 12px;
     flex-shrink: 0;
 }
+
 .btn {
     width: 48px;
     height: 48px;
@@ -104,8 +102,6 @@ button {
     border-radius: 18px;
 }
 
-
-
 .caroussel-card {
     min-width: 0;
 }
@@ -124,7 +120,6 @@ button {
     font-size: 14px;
     margin-bottom: 25px;
 }
-
 
 .table-card {
     width: 100%;
@@ -160,8 +155,6 @@ button {
 .table-card tr:hover td {
     background-color: #202020;
 }
-
-
 
 .student-paragraphe {
     color: #A5A5A5;
@@ -224,6 +217,83 @@ button {
 }
 
 
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    align-items: stretch;
+    transition: transform 0.45s ease-in-out;
+}
+
+.carousel-track > .section-caroussel {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.carousel-track .caroussel-card {
+    flex: 1 1 48%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.carousel-track .carroussel-images {
+    flex: 1 1 48%;
+    min-width: 0;
+
+    display: flex;
+    gap: 8px;
+}
+
+.carousel-track .carousel-image {
+    flex: 1 1 50%;
+    min-width: 0;
+    margin: 0;
+    position: relative;
+}
+
+.carousel-track .carousel-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #343434;
+    border-radius: 50%;
+    background: #151515;
+    color: white;
+    cursor: pointer;
+}
+
+.carousel-btn.next {
+    background: #ffe14d;
+    color: #111;
+}
+
+.carousel-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
 
 
 /* __________________________________________________*/
@@ -385,82 +455,4 @@ button {
 .member-info p {
     color: #888888;
     font-size: 10px;
-}
-
-.carousel-viewport {
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    align-items: stretch;
-    transition: transform 0.45s ease-in-out;
-}
-
-.carousel-track > .section-caroussel {
-    flex: 0 0 100%;
-    width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-
-    display: flex;
-    align-items: stretch;
-    gap: 12px;
-}
-
-.carousel-track .caroussel-card {
-    flex: 1 1 48%;
-    min-width: 0;
-    box-sizing: border-box;
-}
-
-.carousel-track .carroussel-images {
-    flex: 1 1 48%;
-    min-width: 0;
-
-    display: flex;
-    gap: 8px;
-}
-
-.carousel-track .carousel-image {
-    flex: 1 1 50%;
-    min-width: 0;
-    margin: 0;
-    position: relative;
-}
-
-.carousel-track .carousel-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    min-height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-}
-
-
-.buttons {
-    display: flex;
-    gap: 8px;
-}
-
-.btn {
-    width: 36px;
-    height: 36px;
-    border: 1px solid #343434;
-    border-radius: 50%;
-    background: #151515;
-    color: white;
-    cursor: pointer;
-}
-
-.carousel-btn.next {
-    background: #ffe14d;
-    color: #111;
-}
-
-.carousel-btn:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
 }
