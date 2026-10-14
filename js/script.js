@@ -1,32 +1,60 @@
 
 const carouselTrack = document.querySelector(".carousel-track");
-const carouselCards = document.querySelectorAll(".carousel-track > .section-caroussel");
+const testimonialTrack = document.querySelector('.testimonials-track');
+const testimonialsCard = document.querySelectorAll(".testimonials-track > .testimonial-card") ;
+const carouselCard = document.querySelectorAll(".carousel-track > .section-caroussel");
 const prevButtonCarousel = document.querySelector(".section-buttons .prev");
 const nextButtonCarousel = document.querySelector(".section-buttons .next");
+const nextButtonTestimontial = document.querySelector(".testimonials-buttons .next");
+const prevButtonTestimontial = document.querySelector(".testimonials-buttons .prev"); 
 
-let currentIndex = 0;
+let currentIndexCarousel = 0;
+let currentIndexTestimontial = 0; 
 
 function updateCarousel() {
     carouselTrack.style.transform =
-        `translateX(-${currentIndex * 100}%)`;
+        `translateX(-${currentIndexCarousel * 100}%)`;
 
-    prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex === carouselCards.length - 1;
+    prevButtonCarousel.disabled = currentIndexCarousel === 0;
+    nextButtonCarousel.disabled = currentIndexCarousel === carouselCard.length - 1;
 }
 
+function updateTestimontial() {
+    testimonialTrack.style.transform =
+        `translateX(-${currentIndexTestimontial * 100}%)`;
+
+    prevButtonTestimontial.disabled = currentIndexTestimontial === 0;
+    nextButtonTestimontial.disabled =
+        currentIndexTestimontial === testimonialsCard.length - 1;
+}
 
 nextButtonCarousel.addEventListener("click", () => {
-    if (currentIndex < carouselCards.length - 1) {
-        currentIndex++;
+    if (currentIndexCarousel < carouselCard.length - 1) {
+        currentIndexCarousel++;
         updateCarousel();
+    }
+});
+
+nextButtonTestimontial.addEventListener("click", ()=> {
+    if (currentIndexTestimontial < testimonialsCard.length - 1){
+        currentIndexTestimontial ++;
+        updateTestimontial()
     }
 });
 
 prevButtonCarousel.addEventListener("click", () => {
-    if (currentIndex > 0) {
-        currentIndex--;
+    if (currentIndexCarousel > 0) {
+        currentIndexCarousel--;
         updateCarousel();
     }
 });
 
+prevButtonTestimontial.addEventListener("click", ()=>{
+    if (currentIndexTestimontial >0){
+        currentIndexTestimontial--;
+        updateTestimontial();
+    }
+});
+
 updateCarousel();
+updateTestimontial();
