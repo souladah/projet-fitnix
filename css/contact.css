@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0e0e0e;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.conteneur {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-weight: normal;
+}
+
+p {
+  color: #aaaaaa;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+#contact {
+  width: 100%;
+  padding: 70px;
+  background-image: url("../image/fitnix-contact-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-contenu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
