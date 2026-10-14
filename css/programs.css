@@ -125,3 +125,8 @@ ul {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+.pricing-section {
+    padding: 80px 60px 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
