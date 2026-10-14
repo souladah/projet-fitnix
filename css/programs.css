@@ -96,3 +96,23 @@ ul {
     background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
     z-index: 2;
 }
+.program-content {
+    position: relative;
+    z-index: 3;
+    padding: 24px 20px;
+}
+
+.program-title {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.program-desc {
+    color: #a0a0a0;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
