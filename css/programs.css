@@ -255,3 +255,35 @@ ul {
 .featured .period {
     color: rgba(0,0,0,0.7);
 }
+.pricing-features {
+    flex: 1;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pricing-features li {
+    font-size: 13px;
+    color: #a0a0a0;
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.featured .pricing-features li {
+    color: rgba(0,0,0,0.8);
+}
+
+.pricing-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #f4d03f;
+    font-weight: 900;
+    font-size: 13px;
+}
+
+.featured .pricing-features li::before {
+    color: #000;
+}
