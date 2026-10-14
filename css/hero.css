@@ -102,6 +102,25 @@ body{
     width: 100%;
     
 }
+.bouton  {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bouton-principal {
+  background-color: #FFE14D;
+  border: 1px solid  #FFE14D;
+  color: #0c0c0c;
+}
+.bouton-principal:hover {
+  background-color:  #FFE14D;
+  transform: scale(1.05);
+}
 .trainers-section{
     width: 100%;
     padding: 10px 0px 4px;
@@ -146,11 +165,13 @@ body{
 }
 .carte h3 {
     font-size: 24px;
-    margin: 20px;
+    margin-left: 20px;
+    margin-bottom: 0px;
     font-weight: bold;
 }
 .carte p {
-    color: #d3cfcf;
     font-size: 15px;
-    margin: 20px;
+    margin-left: 20px;
+    margin-top: 0px;
+    color:#FFE14D;
 }
