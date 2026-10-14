@@ -191,3 +191,16 @@ ul {
     color: #000;
     border-color: #f4d03f;
 }
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #000;
+    color: #f4d03f;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 3px;
+}
