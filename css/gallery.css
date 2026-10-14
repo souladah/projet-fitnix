@@ -455,3 +455,128 @@ button {
     color: #888888;
     font-size: 10px;
 }
+
+
+/* Tablette */
+@media (max-width: 768px) {
+
+    .transformation-section,
+    .testimonials-section {
+        padding: 40px 20px;
+    }
+
+    .section-header,
+    .testimonials-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .section-caroussel {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .carousel-track > .section-caroussel {
+        flex-direction: column;
+    }
+
+    .carousel-track .caroussel-card,
+    .carousel-track .carroussel-images {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .carousel-track .carousel-image {
+        min-height: 200px;
+    }
+
+    .table-card {
+        font-size: 12px;
+    }
+
+    .table-card th,
+    .table-card td {
+        padding: 10px 5px;
+    }
+
+    .testimonial-card {
+        padding: 18px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+}
+
+
+/* Téléphone */
+@media (max-width: 480px) {
+
+    .transformation-section,
+    .testimonials-section {
+        padding: 30px 15px;
+    }
+
+    .section-title h1 {
+        font-size: 30px;
+    }
+
+    .section-buttons,
+    .testimonials-buttons {
+        gap: 8px;
+    }
+
+    .section-caroussel {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .carroussel-images,
+    .carousel-track .carroussel-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .carousel-image,
+    .carousel-image img,
+    .carousel-track .carousel-image img {
+        min-height: 160px;
+    }
+
+    .caroussel-card h2 {
+        font-size: 20px;
+    }
+
+    .table-card {
+        font-size: 10px;
+    }
+
+    .table-card th,
+    .table-card td {
+        padding: 8px 3px;
+    }
+
+    .student-paragraphe {
+        font-size: 12px;
+    }
+
+    .testimonials-title h2 {
+        font-size: 28px;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .stars {
+        width: 80px;
+        height: 80px;
+    }
+}
