@@ -81,3 +81,11 @@ ul {
     font-weight: 700;
     z-index: 3;
 }
+.program-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
