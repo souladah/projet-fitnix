@@ -61,31 +61,36 @@ body{
 }
 
 
-.droite-main{
-    display : flex; 
+.droite-main{ 
+    top: 90px;
+    right: 20px;
+    position: absolute;
+    display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:baseline;
-    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 250px;
+    min-height: 400px;
+    max-height: 500px;
     padding: 5px;
     
 }
 
 .texte-droite-top {
-    
-    width: 100%;
+    width: auto;
     color: aliceblue;
     padding: 10px;
     
 }
-.texte-droite-year{
-    color:#FFE14D;
-    font-size: 200px;
-    
-}
+
 .border-text-droite{
     border-left: 2px solid #58585f ;
     padding: 15px;
+}
+
+.border-text-droite strong {
+    font-size: 30px;
+    color:#FFE14D;
 }
 
 .texte-droite-bas{
