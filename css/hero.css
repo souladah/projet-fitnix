@@ -1,5 +1,5 @@
 
-h1{
+h1,h2{
     margin-top: 5px;
     font-size:85px;
     color: aliceblue;
@@ -9,7 +9,12 @@ p{
     color: aliceblue;
     font-size: 13px;
 }
-
+h3{
+    margin-top: 5px;
+    font-size:8px;
+    color: aliceblue;
+    font-family: 'Anton', sans-serif;
+}
 body{
     background-image: url("../image/fitnix-hero-background.jpg");
     background-repeat: no-repeat;
@@ -97,3 +102,48 @@ body{
     width: 100%;
     
 }
+.trainers-section{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0px 4px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px ;
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.trainers-header{
+    margin-left: 30px;
+    grid-column: span 2;
+    align-self: center;
+}
+
+.titre-header{
+    font-size: 50px;
+    font-weight: bold;
+}
+.trainers-description {
+    width: 100%;
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-p{
+    max-width: 400px;
+    font-size: 16px;
+    margin: 0;
+    color: #cbcbd1 ;
+}
+.carte{
+    min-width: 0;
+}
+.carte img{
+    width: 100%;
+    height: 450px;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+    opacity: 0.75;
+}
+
