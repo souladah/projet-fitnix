@@ -106,3 +106,69 @@ p {
 .formulaire-contact label {
   display: none;
 }
+.formulaire-contact input,
+.formulaire-contact select,
+.formulaire-contact textarea {
+  width: 100%;
+  padding: 14px;
+  background-color: #0e0e0e;
+  color: white;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.formulaire-contact input::placeholder,
+.formulaire-contact textarea::placeholder {
+  color: #999999;
+}
+
+.formulaire-contact input:focus,
+.formulaire-contact select:focus,
+.formulaire-contact textarea:focus {
+  outline: 2px solid #ffe14d;
+}
+
+.formulaire-contact textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+.contact-envoyer {
+  width: 100%;
+  padding: 15px;
+  background-color: #ffe14d;
+  color: #111111;
+  border: none;
+  border-radius: 3px;
+  font-family: Impact, "Arial Narrow", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.contact-envoyer:hover {
+  background-color: #e8ca35;
+}
+
+#faq .conteneur {
+  display: flex;
+  gap: 80px;
+}
+
+
+.questions {
+  flex: 2;
+}
+
+.faq-intro > p:first-child {
+  color: #ffe14d;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.faq-intro h2 {
+  font-size: 46px;
+  line-height: 1.1;
+  margin: 15px 0 25px;
+}
