@@ -1,0 +1,850 @@
+
+/* ========================================
+   1. RESET ET STYLES GÉNÉRAUX
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0E0E0E;
+    color: #FFFFFF;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* ========================================
+   2. SECTION TRANSFORMATION
+======================================== */
+
+.transformation-section {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    max-width: 750px;
+}
+
+.section-title p {
+    color: #FFE14D;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.section-title h1 {
+    color: #FFFFFF;
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+
+/* ========================================
+   3. BOUTONS TRANSFORMATION
+======================================== */
+
+.section-buttons {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #303030;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #FFFFFF;
+    transition: 0.3s ease;
+}
+
+.btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.btn:hover {
+    border-color: #FFE14D;
+    color: #FFE14D;
+    transform: scale(1.05);
+}
+
+/* Cacher les radios */
+.transformation-section > input[type="radio"] {
+    display: none;
+}
+
+/* Affichage des bonnes flèches */
+.section-buttons > div {
+    display: none;
+    gap: 12px;
+}
+
+#slide1:checked ~ .section-header .controls-slide1,
+#slide2:checked ~ .section-header .controls-slide2,
+#slide3:checked ~ .section-header .controls-slide3,
+#slide4:checked ~ .section-header .controls-slide4 {
+    display: flex;
+}
+
+
+/* ========================================
+   4. CARROUSEL TRANSFORMATION
+======================================== */
+
+.carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    width: 400%;
+    transition: transform 0.4s ease;
+}
+
+.carousel-track > .section-caroussel {
+    flex: 0 0 25%;
+    width: 25%;
+    min-width: 0;
+}
+
+/* Déplacement selon le bouton radio */
+#slide1:checked ~ .carousel-viewport .carousel-track {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .carousel-viewport .carousel-track {
+    transform: translateX(-25%);
+}
+
+#slide3:checked ~ .carousel-viewport .carousel-track {
+    transform: translateX(-50%);
+}
+
+#slide4:checked ~ .carousel-viewport .carousel-track {
+    transform: translateX(-75%);
+}
+
+
+/* ========================================
+   5. CARTE TRANSFORMATION
+======================================== */
+
+.section-caroussel {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    padding: 30px;
+    background-color: #171717;
+    border: 1px solid #303030;
+    border-radius: 18px;
+}
+
+.caroussel-card {
+    flex: 1 1 48%;
+    min-width: 0;
+}
+
+.caroussel-card h2 {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 6px;
+}
+
+.caroussel-card > p:first-of-type {
+    color: #A5A5A5;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   6. TABLEAU TRANSFORMATION
+======================================== */
+
+.table-card {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.table-card th,
+.table-card td {
+    padding: 13px 10px;
+    text-align: center;
+    border-bottom: 1px solid #303030;
+}
+
+.table-card th {
+    color: #FFE14D;
+    background-color: #222222;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.table-card td:first-child {
+    color: #A5A5A5;
+    text-align: left;
+}
+
+.table-card td {
+    color: #FFFFFF;
+}
+
+.table-card tr:hover td {
+    background-color: #202020;
+}
+
+.student-paragraphe {
+    color: #A5A5A5;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.8;
+    padding-left: 16px;
+    border-left: 3px solid #FFE14D;
+}
+
+
+/* ========================================
+   7. IMAGES BEFORE / AFTER
+======================================== */
+
+.carroussel-images {
+    flex: 1 1 48%;
+    display: flex;
+    gap: 15px;
+    min-width: 0;
+}
+
+.carousel-image {
+    position: relative;
+    flex: 1 1 50%;
+    min-width: 0;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #252525;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.carousel-image:hover img {
+    transform: scale(1.05);
+}
+
+.carousel-image figcaption {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    padding: 7px 14px;
+    background-color: #FFE14D;
+    color: #0E0E0E;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* ========================================
+   8. SECTION TESTIMONIALS
+======================================== */
+
+
+/* SECTION TESTIMONIALS */
+.testimonials-section {
+    padding: 60px 40px;
+    background-color: #0E0E0E;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+/* Cacher les boutons radio */
+.testimonials-section input[type="radio"] {
+    display: none;
+}
+
+/* En-tête */
+.testimonials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.testimonials-subtitle {
+    color: #FFE14D;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.testimonials-title h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+/* Boutons */
+.testimonials-buttons {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.testimonial-controls {
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Afficher les bons boutons selon la position */
+#testimonial1:checked ~ .testimonials-header .controls-testimonial1,
+#testimonial2:checked ~ .testimonials-header .controls-testimonial2,
+#testimonial3:checked ~ .testimonials-header .controls-testimonial3,
+#testimonial4:checked ~ .testimonials-header .controls-testimonial4,
+#testimonial5:checked ~ .testimonials-header .controls-testimonial5,
+#testimonial6:checked ~ .testimonials-header .controls-testimonial6 {
+    display: flex;
+}
+
+.testimonial-btn {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FFE14D;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #FFE14D;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.testimonial-btn:hover {
+    background-color: #FFE14D;
+    color: #0E0E0E;
+}
+
+/* Fenêtre du carrousel */
+.testimonials-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Les 6 cartes sont sur une seule ligne */
+.testimonials-track {
+    display: flex;
+    width: 600%;
+    transition: transform 0.5s ease;
+}
+
+/* Chaque carte occupe la largeur de la fenêtre */
+.testimonial-card {
+    flex: 0 0 16.666667%;
+    min-width: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #191919;
+    border: 1px solid #242424;
+    border-radius: 3px;
+}
+
+/* Déplacement d'une carte à chaque clic */
+#testimonial1:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(0);
+}
+
+#testimonial2:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-16.666667%);
+}
+
+#testimonial3:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-33.333333%);
+}
+
+#testimonial4:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-50%);
+}
+
+#testimonial5:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-66.666667%);
+}
+
+#testimonial6:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-83.333333%);
+}
+
+/* Étoiles */
+.testimonial-stars {
+    color: #FFE14D;
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* Texte du commentaire */
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Profil du membre */
+.testimonial-member {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.member-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-info h3 {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.member-info p {
+    color: #AAAAAA;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Tablettes et mobiles */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 40px 20px;
+    }
+
+    .testimonials-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .testimonials-title h2 {
+        font-size: 28px;
+    }
+
+    .testimonial-card {
+        padding: 18px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+}
+
+/* Petits mobiles */
+@media (max-width: 480px) {
+    .testimonials-section {
+        padding: 30px 15px;
+    }
+
+    .testimonials-title h2 {
+        font-size: 24px;
+    }
+
+    .testimonial-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
+}
+
+
+/* ========================================
+   14. RESPONSIVE : TABLETTE
+======================================== */
+
+
+/* ========================================
+   14. RESPONSIVE : TABLETTE
+======================================== */
+
+@media (max-width: 768px) {
+
+    /* Espacement des sections */
+    .transformation-section,
+    .testimonials-section {
+        padding: 40px 20px;
+    }
+
+    /* En-têtes */
+    .section-header,
+    .testimonials-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    /* Section Before / After */
+    .section-caroussel {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .carousel-track > .section-caroussel {
+        flex-direction: column;
+    }
+
+    .carousel-track .caroussel-card,
+    .carousel-track .carroussel-images {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .carousel-track .carousel-image,
+    .carousel-track .carousel-image img {
+        min-height: 200px;
+    }
+
+    /* Tableau */
+    .table-card {
+        font-size: 12px;
+    }
+
+    .table-card th,
+    .table-card td {
+        padding: 10px 5px;
+    }
+
+}
+
+/* ========================================
+   15. RESPONSIVE : TÉLÉPHONE
+======================================== */
+
+@media (max-width: 480px) {
+
+    /* Espacement */
+    .transformation-section{
+        padding: 30px 15px;
+    }
+
+    /* Titres */
+    .section-title h1 {
+        font-size: 30px;
+    }
+
+    /* Boutons */
+    .section-buttons{
+        gap: 8px;
+    }
+
+   
+
+    /* Section Before / After */
+    .section-caroussel {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .carroussel-images,
+    .carousel-track .carroussel-images {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .carousel-image,
+    .carousel-image img,
+    .carousel-track .carousel-image img {
+        min-height: 160px;
+    }
+
+    .caroussel-card h2 {
+        font-size: 20px;
+    }
+
+    /* Tableau */
+    .table-card {
+        font-size: 10px;
+    }
+
+    .table-card th,
+    .table-card td {
+        padding: 8px 3px;
+    }
+
+    .student-paragraphe {
+        font-size: 12px;
+    }
+
+    
+}
+
+
+/* SECTION TESTIMONIALS */
+.testimonials-section {
+    padding: 60px 40px;
+    background-color: #0E0E0E;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+/* Cacher les boutons radio */
+.testimonials-section input[type="radio"] {
+    display: none;
+}
+
+/* En-tête */
+.testimonials-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.testimonials-subtitle {
+    color: #FFE14D;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.testimonials-title h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+/* Boutons */
+.testimonials-buttons {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.testimonial-controls {
+    display: none;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Afficher les bons boutons selon la position */
+#testimonial1:checked ~ .testimonials-header .controls-testimonial1,
+#testimonial2:checked ~ .testimonials-header .controls-testimonial2,
+#testimonial3:checked ~ .testimonials-header .controls-testimonial3,
+#testimonial4:checked ~ .testimonials-header .controls-testimonial4,
+#testimonial5:checked ~ .testimonials-header .controls-testimonial5,
+#testimonial6:checked ~ .testimonials-header .controls-testimonial6 {
+    display: flex;
+}
+
+.testimonial-btn {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #FFE14D;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #FFE14D;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.testimonial-btn:hover {
+    background-color: #FFE14D;
+    color: #0E0E0E;
+}
+
+/* Fenêtre du carrousel */
+.testimonials-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Les 6 cartes sont sur une seule ligne */
+.testimonials-track {
+    display: flex;
+    width: 600%;
+    transition: transform 0.5s ease;
+}
+
+/* Chaque carte occupe la largeur de la fenêtre */
+.testimonial-card {
+    flex: 0 0 16.666667%;
+    min-width: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #191919;
+    border: 1px solid #242424;
+    border-radius: 3px;
+}
+
+/* Déplacement d'une carte à chaque clic */
+#testimonial1:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(0);
+}
+
+#testimonial2:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-16.666667%);
+}
+
+#testimonial3:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-33.333333%);
+}
+
+#testimonial4:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-50%);
+}
+
+#testimonial5:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-66.666667%);
+}
+
+#testimonial6:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-83.333333%);
+}
+
+/* Étoiles */
+.testimonial-stars {
+    color: #FFE14D;
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* Texte du commentaire */
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Profil du membre */
+.testimonial-member {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.member-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-info h3 {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.member-info p {
+    color: #AAAAAA;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Tablettes et mobiles */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 40px 20px;
+    }
+
+    .testimonials-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .testimonials-title h2 {
+        font-size: 28px;
+    }
+
+    .testimonial-card {
+        padding: 18px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+}
+
+/* Petits mobiles */
+@media (max-width: 480px) {
+    .testimonials-section {
+        padding: 30px 15px;
+    }
+
+    .testimonials-title h2 {
+        font-size: 24px;
+    }
+
+    .testimonial-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
+}
+
+
