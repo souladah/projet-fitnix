@@ -154,9 +154,18 @@ ul {
     gap: 4px;
 }
 
+.pricing-period-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
 .toggle-btn {
+    display: block;
     background: transparent;
-    border: none;
     color: #a0a0a0;
     font-size: 13px;
     font-weight: 700;
@@ -164,12 +173,46 @@ ul {
     border-radius: 50px;
     cursor: pointer;
     font-family: inherit;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.toggle-btn.active {
+#monthly:checked ~ .pricing-header label[for="monthly"],
+#yearly:checked ~ .pricing-header label[for="yearly"] {
     background: #f4d03f;
     color: #000;
 }
+
+.toggle-btn:hover {
+    color: #ffffff;
+}
+
+#monthly:checked ~ .pricing-header label[for="monthly"]:hover,
+#yearly:checked ~ .pricing-header label[for="yearly"]:hover {
+    color: #000;
+}
+
+#monthly:focus-visible ~ .pricing-header label[for="monthly"],
+#yearly:focus-visible ~ .pricing-header label[for="yearly"] {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.yearly-price,
+.yearly-period {
+    display: none;
+}
+
+#yearly:checked ~ .pricing-grid .monthly-price,
+#yearly:checked ~ .pricing-grid .monthly-period {
+    display: none;
+}
+
+#yearly:checked ~ .pricing-grid .yearly-price,
+#yearly:checked ~ .pricing-grid .yearly-period {
+    display: inline;
+}
+
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -349,5 +392,9 @@ ul {
     }
     .amount {
         font-size: 44px;
+    }
+    .toggle-btn {
+        padding: 10px 14px;
+        font-size: 12px;
     }
 }
