@@ -16,7 +16,8 @@ h3{
     color: aliceblue;
     font-family: 'Anton', sans-serif;
 }
-body{
+
+.background{
     background-image: url("../image/fitnix-hero-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -94,6 +95,7 @@ body{
 .border-text-droite{
     border-left: 2px solid #58585f ;
     padding: 15px;
+    color: aliceblue;
 }
 
 .border-text-droite strong {
@@ -103,7 +105,7 @@ body{
 
 .texte-droite-bas{
     width: 100%;
-    
+    color: aliceblue;
 }
 .bouton  {
   display: inline-block;
@@ -196,14 +198,21 @@ body{
 }
 
 @media (max-width: 768px) {
+.background{
+    background-image: url("../image/fitnix-hero-background.jpg");
+    background-position: center top;
+    background-attachment: scroll;
+    background-size: cover;
+    width: 100%;
+}
     h1,h2{
     font-size:30px;
     color: aliceblue;
     font-family: 'Anton', sans-serif;
 }
-p{
+.paragraphe{
     color: aliceblue;
-    font-size: 9px;
+    font-size: 10px;
     margin-top: 30px;
 }
 .conteneur {
@@ -260,7 +269,9 @@ p{
 }
 
 .texte-droite-bas{
-    width: 50%;
+    width: 40%;
+    font-size: 10px;
+    color: aliceblue;
 }
 .bouton  {
   padding: 4px 10px;
@@ -269,11 +280,10 @@ p{
   font-weight: 800;
 }
 .marquee-direction {
-        width: 103%;
+        width: 80%;
         height: 40px;
+        margin-right: 0;
     }
-
-}
 .marquee{
     height: 40px;
     gap:20px;
@@ -281,4 +291,6 @@ p{
 .marquee span {
     gap: 20px;
 }
+}
+
 
