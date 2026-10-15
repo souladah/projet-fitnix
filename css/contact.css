@@ -272,3 +272,119 @@ p {
     padding: 20px 0;
   }
 }
+
+@media (max-width: 768px) {
+  .conteneur {
+    width: 90%;
+  }
+
+  #contact {
+    width: 100%;
+    margin: 0 0 40px;
+    padding: 40px 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .contact-contenu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .contact-infos {
+    width: 100%;
+  }
+
+  .contact-surtitre {
+    font-size: 12px;
+  }
+
+  .contact-infos h1 {
+    font-size: 36px;
+    margin: 15px 0 20px;
+  }
+
+  .contact-infos > p {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .contact-info {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+  }
+
+  .contact-icone {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+  }
+
+  .formulaire-contact {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .contact-titre-menu {
+    font-size: 24px;
+  }
+
+  .formulaire-contact input,
+  .formulaire-contact select,
+  .formulaire-contact textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .contact-envoyer {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  #faq {
+    padding: 40px 0;
+  }
+
+  #faq .conteneur {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .faq-intro {
+    width: 100%;
+  }
+
+  .faq-intro h2 {
+    font-size: 34px;
+    margin: 10px 0 20px;
+  }
+
+  .questions {
+    width: 100%;
+  }
+
+  .questions details {
+    padding: 20px 0;
+  }
+
+  .questions summary {
+    gap: 15px;
+    cursor: pointer;
+  }
+
+  .questions h3 {
+    font-size: 18px;
+  }
+
+  .questions p {
+    font-size: 14px;
+  }
+}
