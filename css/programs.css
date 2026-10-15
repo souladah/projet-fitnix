@@ -130,3 +130,19 @@ ul {
     max-width: 1200px;
     margin: 0 auto;
 }
+.pricing-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-header .subtitle {
+    display: inline-block;
+}
+
+.pricing-desc {
+    color: #a0a0a0;
+    font-size: 14px;
+    max-width: 500px;
+    margin: 20px auto 30px;
+    line-height: 1.6;
+}
