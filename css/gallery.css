@@ -88,8 +88,8 @@ img {
 }
 
 .btn svg {
-    width: 22px;
-    height: 22px;
+    width: 40px;
+    height: 40px;
 }
 
 .btn:hover {
@@ -131,11 +131,6 @@ img {
 #slide4:checked ~ .carousel-viewport .carousel-track {
     transform: translateX(-75%);
 }
-
-
-/* ========================================
-   5. CARTE TRANSFORMATION
-======================================== */
 
 .section-caroussel {
     display: flex;
@@ -188,13 +183,13 @@ img {
     letter-spacing: 0.5px;
 }
 
+.table-card td {
+    color: #FFFFFF;
+}
+
 .table-card td:first-child {
     color: #A5A5A5;
     text-align: left;
-}
-
-.table-card td {
-    color: #FFFFFF;
 }
 
 .table-card tr:hover td {
@@ -253,11 +248,8 @@ img {
     letter-spacing: 1px;
 }
 
-/* ___________________________*/
+/* ________SECTION TESTIMONIALS________*/
 
-/* ========================================
-   SECTION TESTIMONIALS
-======================================== */
 
 .testimonials-section {
     padding: 60px 40px;
@@ -266,7 +258,6 @@ img {
     overflow: hidden;
 }
 
-/* Cacher les boutons radio */
 .testimonials-section input[type="radio"] {
     display: none;
 }
@@ -300,6 +291,15 @@ img {
     display: none;
     align-items: center;
     gap: 10px;
+}
+
+#testimonial1:checked ~ .testimonials-header .controls-testimonial1,
+#testimonial2:checked ~ .testimonials-header .controls-testimonial2,
+#testimonial3:checked ~ .testimonials-header .controls-testimonial3,
+#testimonial4:checked ~ .testimonials-header .controls-testimonial4,
+#testimonial5:checked ~ .testimonials-header .controls-testimonial5,
+#testimonial6:checked ~ .testimonials-header .controls-testimonial6 {
+    display: flex;
 }
 
 .testimonial-btn {
@@ -327,10 +327,6 @@ img {
     color: #0E0E0E;
 }
 
-.desktop-controls {
-    display: none;
-}
-
 .testimonials-viewport {
     width: 100%;
     overflow: hidden;
@@ -346,7 +342,6 @@ img {
 .testimonial-card {
     flex: 0 0 16.666667%;
     min-width: 0;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -355,136 +350,6 @@ img {
     border-radius: 3px;
 }
 
-.testimonial-stars {
-    color: #FFE14D;
-    font-size: 24px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
-.testimonial-text {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 25px;
-}
-
-.testimonial-member {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: auto;
-}
-
-.member-avatar {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.member-info h3 {
-    font-size: 14px;
-    margin: 0 0 5px;
-}
-
-.member-info p {
-    color: #AAAAAA;
-    font-size: 13px;
-    margin: 0;
-}
-
-
-/* SECTION TESTIMONIALS */
-.testimonials-section {
-    padding: 60px 40px;
-    background-color: #0E0E0E;
-    color: #FFFFFF;
-    overflow: hidden;
-}
-
-/* Cacher les boutons radio */
-.testimonials-section input[type="radio"] {
-    display: none;
-}
-
-/* En-tête */
-.testimonials-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.testimonials-subtitle {
-    color: #FFE14D;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.testimonials-title h2 {
-    font-size: 32px;
-    margin: 0;
-}
-
-/* Boutons */
-.testimonials-buttons {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.testimonial-controls {
-    display: none;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Afficher les bons boutons selon la position */
-#testimonial1:checked ~ .testimonials-header .controls-testimonial1,
-#testimonial2:checked ~ .testimonials-header .controls-testimonial2,
-#testimonial3:checked ~ .testimonials-header .controls-testimonial3,
-#testimonial4:checked ~ .testimonials-header .controls-testimonial4,
-#testimonial5:checked ~ .testimonials-header .controls-testimonial5,
-#testimonial6:checked ~ .testimonials-header .controls-testimonial6 {
-    display: flex;
-}
-
-.testimonial-btn {
-    width: 43px;
-    height: 43px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #FFE14D;
-    border-radius: 50%;
-    background-color: transparent;
-    color: #FFE14D;
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.testimonial-btn:hover {
-    background-color: #FFE14D;
-    color: #0E0E0E;
-}
-
-/* Fenêtre du carrousel */
-.testimonials-viewport {
-    width: 100%;
-    overflow: hidden;
-}
-
-/* Les 6 cartes sont sur une seule ligne */
-.testimonials-track {
-    /* display: flex;
-    width: 600%;
-    transition: transform 0.5s ease; */
-}
-
-
-/* Déplacement d'une carte à chaque clic */
 #testimonial1:checked ~ .testimonials-viewport .testimonials-track {
     transform: translateX(0);
 }
@@ -509,7 +374,6 @@ img {
     transform: translateX(-83.333333%);
 }
 
-/* Étoiles */
 .testimonial-stars {
     color: #FFE14D;
     font-size: 24px;
@@ -517,14 +381,12 @@ img {
     margin-bottom: 20px;
 }
 
-/* Texte du commentaire */
 .testimonial-text {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 25px;
 }
 
-/* Profil du membre */
 .testimonial-member {
     display: flex;
     align-items: center;
@@ -550,30 +412,88 @@ img {
     margin: 0;
 }
 
-@media (min-width: 769px) {
 
-    /* Afficher les 3 premières cartes */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 769px) {
+     .testimonials-track {
+        width: 200%;
+    }
+
+     .testimonial-card {
+        flex: 0 0 calc(16.666667% - 20px);
+        margin-right: 20px;
+    }
+
     #testimonial1:checked ~ .testimonials-viewport .testimonials-track,
     #testimonial2:checked ~ .testimonials-viewport .testimonials-track,
     #testimonial3:checked ~ .testimonials-viewport .testimonials-track {
         transform: translateX(0);
     }
 
-    /* Afficher les 3 dernières cartes */
     #testimonial4:checked ~ .testimonials-viewport .testimonials-track,
     #testimonial5:checked ~ .testimonials-viewport .testimonials-track,
     #testimonial6:checked ~ .testimonials-viewport .testimonials-track {
         transform: translateX(-50%);
     }
 
-    /* Afficher les boutons du premier groupe */
-    #testimonial1:checked ~ .testimonials-header .desktop-first,
-    #testimonial2:checked ~ .testimonials-header .desktop-first,
-    #testimonial3:checked ~ .testimonials-header .desktop-first {
-        display: flex;
+    .controls-testimonial1,
+    .controls-testimonial2,
+    .controls-testimonial3,
+    .controls-testimonial4,
+    .controls-testimonial5,
+    .controls-testimonial6 {
+        display: none !important;
     }
 
-    /* Afficher les boutons du deuxième groupe */
+    #testimonial1:checked ~ .testimonials-header .desktop-first,
+    #testimonial2:checked ~ .testimonials-header .desktop-first,
+    #testimonial3:checked ~ .testimonials-header .desktop-first,
     #testimonial4:checked ~ .testimonials-header .desktop-second,
     #testimonial5:checked ~ .testimonials-header .desktop-second,
     #testimonial6:checked ~ .testimonials-header .desktop-second {
