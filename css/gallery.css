@@ -88,6 +88,26 @@ button {
     transform: scale(1.05);
 }
 
+.transformation-section > input[type="radio"] {
+    display: none;
+}
+
+.section-buttons > div {
+    display: none;
+    gap: 12px;
+}
+
+.section-buttons .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
 
 .section-caroussel {
     display: grid;
@@ -222,21 +242,61 @@ button {
     overflow: hidden;
 }
 
+.carousel-viewport input[type="radio"] {
+    display: none;
+}
+
 .carousel-track {
     display: flex;
-    align-items: stretch;
-    transition: transform 0.45s ease-in-out;
+    width: 400%;
+    transition: transform 0.4s ease;
 }
 
 .carousel-track > .section-caroussel {
-    flex: 0 0 100%;
-    width: 100%;
+    flex: 0 0 25%;
+    width: 25%;
     min-width: 0;
-    box-sizing: border-box;
+}
 
+#slide1:checked ~ .section-header .controls-slide1,
+#slide2:checked ~ .section-header .controls-slide2,
+#slide3:checked ~ .section-header .controls-slide3,
+#slide4:checked ~ .section-header .controls-slide4 {
     display: flex;
-    align-items: stretch;
-    gap: 12px;
+}
+
+#slide1:checked ~ .carousel-viewport .carousel-track {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .carousel-viewport .carousel-track {
+    transform: translateX(-25%);
+}
+
+#slide3:checked ~ .carousel-viewport .carousel-track {
+    transform: translateX(-50%);
+}
+
+#slide4:checked ~ .carousel-viewport .carousel-track {
+    transform: translateX(-75%);
+}
+
+@keyframes carouselSlide {
+    0%, 28% {
+        transform: translateX(0);
+    }
+
+    33%, 61% {
+        transform: translateX(-33.333%);
+    }
+
+    66%, 94% {
+        transform: translateX(-66.666%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .carousel-track .caroussel-card {
@@ -296,23 +356,29 @@ button {
 }
 
 
-/* __________________________________________________*/
+
+/* ======================================== */
+
 .testimonials-section {
     width: 100%;
     max-width: 1250px;
     margin: 0 auto;
     padding: 70px 24px;
-
     background-color: #0e0e0e;
     color: #ffffff;
 }
 
+/* Cacher les boutons radio */
+.testimonials-section > input[type="radio"] {
+    display: none;
+}
+
+/* En-tête */
 .testimonials-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 25px;
-
     margin-bottom: 40px;
 }
 
@@ -324,9 +390,7 @@ button {
     display: flex;
     align-items: center;
     gap: 8px;
-
     margin-bottom: 10px;
-
     color: #ffe14d;
     font-size: 11px;
     font-weight: 700;
@@ -348,60 +412,62 @@ button {
     letter-spacing: 0.5px;
 }
 
+/* Boutons de navigation */
 .testimonials-buttons {
-    display: flex;
+    flex-shrink: 0;
+}
+
+.testimonial-controls {
+    display: none;
     align-items: center;
     gap: 10px;
-    flex-shrink: 0;
+}
+
+/* Afficher les flèches correspondant au slide actif */
+#testimonial1:checked ~ .testimonials-header .controls-testimonial1,
+#testimonial2:checked ~ .testimonials-header .controls-testimonial2,
+#testimonial3:checked ~ .testimonials-header .controls-testimonial3 {
+    display: flex;
 }
 
 .testimonial-btn {
     width: 43px;
     height: 43px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     border: 1px solid #ffe14d;
     border-radius: 50%;
-
     background-color: transparent;
     color: #ffe14d;
-
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
-
     transition: background-color 0.3s, color 0.3s;
 }
 
-.testimonial-btn.active,
-.testimonial-btn:hover:not(:disabled) {
+.testimonial-btn:hover {
     background-color: #ffe14d;
     color: #0e0e0e;
 }
 
-.testimonial-btn:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-}
-
-
+/* Fenêtre qui masque les autres cartes */
 .testimonials-viewport {
     width: 100%;
     overflow: hidden;
 }
 
+/* Piste qui contient les 3 cartes */
 .testimonials-track {
     display: flex;
-    gap: 18px;
-    width: 100%;
+    width: 200%;
     transition: transform 0.4s ease;
 }
 
-.testimonial-card {
+/* Chaque carte occupe la largeur de la fenêtre */
+.testimonials-track .testimonial-card {
+    flex: 0 0 16.666%;
     min-width: 0;
-    flex :0 0 calc(100% - 48px /3) ;
+    box-sizing: border-box;
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -415,46 +481,110 @@ button {
     background-color: #202020;
 }
 
-.stars {
+/* Déplacement du carrousel */
+#testimonial1:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(0);
+}
+
+#testimonial2:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-50%);
+}
+
+#testimonial3:checked ~ .testimonials-viewport .testimonials-track {
+    transform: translateX(-66.666667%);
+}
+
+.testimonial-btn svg{
+    width: 44px;
+    height: 44px;
+}
+/* Étoiles */
+.testimonial-stars svg {
     width: 100px;
     height: 100px;
 }
 
+.stars {
+    color: #ffe14d;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+/* Texte du témoignage */
 .testimonial-text {
     flex: 1;
     margin-bottom: 25px;
-
     color: #c5c5c5;
     font-size: 16px;
- 
+    line-height: 1.7;
 }
 
-
+/* Informations du membre */
 .testimonial-member {
     display: flex;
     align-items: center;
     gap: 12px;
-
     margin-top: auto;
 }
 
 .member-avatar {
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
     flex-shrink: 0;
-
     object-fit: cover;
     object-position: center;
-
     border-radius: 50%;
     background-color: #333333;
 }
 
 
+.member-info h3 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
 .member-info p {
     color: #888888;
-    font-size: 10px;
+    font-size: 11px;
 }
+
+/* Tablette */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 40px 20px;
+    }
+
+    .testimonials-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .testimonials-track .testimonial-card {
+        padding: 20px;
+    }
+}
+
+/* Téléphone */
+@media (max-width: 480px) {
+    .testimonials-section {
+        padding: 30px 15px;
+    }
+
+    .testimonials-title h2 {
+        font-size: 28px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+
+    .testimonial-btn {
+        width: 38px;
+        height: 38px;
+    }
+}
+
 
 
 /* Tablette */
