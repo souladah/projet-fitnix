@@ -66,7 +66,6 @@ img {
     gap: 12px;
 }
 
-
 #slide1:checked ~ .section-header .controls-slide1,
 #slide2:checked ~ .section-header .controls-slide2,
 #slide3:checked ~ .section-header .controls-slide3,
@@ -114,7 +113,6 @@ img {
     width: 25%;
     min-width: 0;
 }
-
 
 #slide1:checked ~ .carousel-viewport .carousel-track {
     transform: translateX(0);
@@ -249,8 +247,6 @@ img {
 }
 
 /* ________SECTION TESTIMONIALS________*/
-
-
 .testimonials-section {
     padding: 60px 40px;
     background-color: #0E0E0E;
@@ -334,9 +330,9 @@ img {
 
 .testimonials-track {
     display: flex;
-    width: 200%;
+    width: 600%;
     transition: transform 0.5s ease;
-    gap: 5px ;
+
 }
 
 .testimonial-card {
@@ -454,23 +450,20 @@ img {
 }
 
 @media (max-width: 768px) {
-    .testimonials-section {
+    .transformation-section {
         padding: 40px 20px;
     }
 
-    .testimonials-header {
+    .tsection-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
     }
+
     .section-caroussel {
         flex-direction: column;
         padding: 20px;
         gap: 20px;
-    }
-
-    .testimonials-title h2 {
-        font-size: 28px;
     }
 
     .carousel-track .caroussel-card,
@@ -484,8 +477,8 @@ img {
         min-height: 200px;
     }
 
-    .testimonial-card {
-        padding: 18px;
+    .table-card {
+        font-size: 12px;
     }
     
     .table-card th,
@@ -515,14 +508,10 @@ img {
         font-size: 14px;
     }
 
-    .testimonial-text {
-        font-size: 14px;
-    }
 }
-
    
 @media (max-width: 480px) {
-    .testimonials-section {
+    .transformation-section {
         padding: 30px 15px;
     }
 
