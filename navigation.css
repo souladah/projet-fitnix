@@ -74,6 +74,8 @@
             transition: background-color 0.3s ease;
             font-family: Arial, Helvetica, sans-serif;
         }
+        .but{background-color: white;border: none;border-radius: 5px;display: none;}
+        .but div{background-color: black;justify-items: center;height: 2px;width: 20px;margin: 6px;border-radius: 10px;}
 
         .btn-contact:hover {
             color: gold;
@@ -88,6 +90,9 @@
             .nav-links {
                 display: none;
             }
+            .but{display: block;}
+
         }
-        main{width: 100%;height: 600px;}
+        
+       
        
