@@ -46,6 +46,7 @@ h3{
     margin-bottom: 5px;
 }
 .titre-texte{
+    font-size:85px;
     color:#FFE14D;
 }
 .image-texte{
@@ -218,7 +219,7 @@ html, body {
 }
 .paragraphe{
     color: aliceblue;
-    font-size: 18px;
+    font-size: 15px;
     margin-top: 30px;
 }
 .conteneur {
@@ -251,7 +252,7 @@ html, body {
         height: 28px;
 }
 .titre-texte{
-    font-size: 30px;
+    font-size: 40px;
 }
 .droite-main {
         position: static;
