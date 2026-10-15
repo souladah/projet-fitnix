@@ -412,54 +412,6 @@ img {
     margin: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (min-width: 769px) {
      .testimonials-track {
         width: 200%;
@@ -502,7 +454,6 @@ img {
 }
 
 @media (max-width: 768px) {
-
     .testimonials-section {
         padding: 40px 20px;
     }
@@ -512,107 +463,14 @@ img {
         align-items: flex-start;
         gap: 20px;
     }
-
-    .testimonials-title h2 {
-        font-size: 28px;
-    }
-
-
-    .testimonials-track {
-        width: 600%;
-    }
-
-    .testimonial-card {
-        flex: 0 0 16.666667%;
-        padding: 18px;
-    }
-
-    #testimonial1:checked ~ .testimonials-viewport .testimonials-track {
-        transform: translateX(0);
-    }
-
-    #testimonial2:checked ~ .testimonials-viewport .testimonials-track {
-        transform: translateX(-16.666667%);
-    }
-
-    #testimonial3:checked ~ .testimonials-viewport .testimonials-track {
-        transform: translateX(-33.333333%);
-    }
-
-    #testimonial4:checked ~ .testimonials-viewport .testimonials-track {
-        transform: translateX(-50%);
-    }
-
-    #testimonial5:checked ~ .testimonials-viewport .testimonials-track {
-        transform: translateX(-66.666667%);
-    }
-
-    #testimonial6:checked ~ .testimonials-viewport .testimonials-track {
-        transform: translateX(-83.333333%);
-    }
-
-    .desktop-controls {
-        display: none !important;
-    }
-
-    #testimonial1:checked ~ .testimonials-header .controls-testimonial1,
-    #testimonial2:checked ~ .testimonials-header .controls-testimonial2,
-    #testimonial3:checked ~ .testimonials-header .controls-testimonial3,
-    #testimonial4:checked ~ .testimonials-header .controls-testimonial4,
-    #testimonial5:checked ~ .testimonials-header .controls-testimonial5,
-    #testimonial6:checked ~ .testimonials-header .controls-testimonial6 {
-        display: flex;
-    }
-
-    .testimonial-text {
-        font-size: 14px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .testimonials-section {
-        padding: 40px 20px;
-    }
-
-    .testimonials-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
-    .testimonials-title h2 {
-        font-size: 28px;
-    }
-
-    .testimonial-card {
-        padding: 18px;
-    }
-
-    .testimonial-text {
-        font-size: 14px;
-    }
-
-    .transformation-section,
-    .testimonials-section {
-        padding: 40px 20px;
-    }
-
-    .section-header,
-    .testimonials-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
     .section-caroussel {
         flex-direction: column;
         padding: 20px;
         gap: 20px;
     }
 
-    .carousel-track > .section-caroussel {
-        flex-direction: column;
+    .testimonials-title h2 {
+        font-size: 28px;
     }
 
     .carousel-track .caroussel-card,
@@ -626,15 +484,15 @@ img {
         min-height: 200px;
     }
 
-    /* Tableau */
-    .table-card {
-        font-size: 12px;
+    .testimonial-card {
+        padding: 18px;
     }
-
+    
     .table-card th,
     .table-card td {
         padding: 10px 5px;
     }
+
     .testimonials-section {
         padding: 40px 20px;
     }
@@ -656,77 +514,29 @@ img {
     .testimonial-text {
         font-size: 14px;
     }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
 }
 
+   
 @media (max-width: 480px) {
     .testimonials-section {
         padding: 30px 15px;
     }
 
-    .testimonials-title h2 {
-        font-size: 24px;
-    }
-
-    .testimonial-btn {
-        width: 38px;
-        height: 38px;
-        font-size: 20px;
-    }
-
-    .testimonial-card {
-        padding: 15px;
-    }
-
-    /* Espacement */
-    .transformation-section{
-        padding: 30px 15px;
-    }
-
-    /* Titres */
-    .section-title h1 {
-        font-size: 30px;
-    }
-
-    /* Boutons */
-    .section-buttons{
-        gap: 8px;
-    }
-
-    .testimonials-section {
-        padding: 30px 15px;
-    }
-
-    .testimonials-title h2 {
-        font-size: 24px;
-    }
-
-    .testimonial-btn {
-        width: 38px;
-        height: 38px;
-        font-size: 20px;
-    }
-
-    .testimonial-card {
-        padding: 15px;
-    }
-   
-
-    /* Section Before / After */
     .section-caroussel {
         padding: 15px;
-        gap: 20px;
     }
 
-    .carroussel-images,
-    .carousel-track .carroussel-images {
+    .carroussel-images {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
     }
 
-    .carousel-image,
-    .carousel-image img,
-    .carousel-track .carousel-image img {
+    .carousel-track .carroussel-image img {
         min-height: 160px;
     }
 
@@ -734,11 +544,10 @@ img {
         font-size: 20px;
     }
 
-    /* Tableau */
     .table-card {
         font-size: 10px;
     }
-
+    
     .table-card th,
     .table-card td {
         padding: 8px 3px;
@@ -747,7 +556,22 @@ img {
     .student-paragraphe {
         font-size: 12px;
     }
+
+    .testimonials-section {
+        padding: 30px 15px;
+    }
+
+    .testimonials-title h2 {
+        font-size: 24px;
+    }
+
+    .testimonial-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
 }
-
-
-
