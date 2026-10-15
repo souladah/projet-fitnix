@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+.subtitle {
+    color: #f4d03f;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.section-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+.programs-section {
+    padding: 80px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.header-right {
+    max-width: 340px;
+    color: #a0a0a0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.program-card {
+    position: relative;
+    background: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.program-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #f4d03f;
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 3;
+}
+.program-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.program-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
+    z-index: 2;
+}
+.program-content {
+    position: relative;
+    z-index: 3;
+    padding: 24px 20px;
+}
+
+.program-title {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.program-desc {
+    color: #a0a0a0;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+.program-meta {
+    display: flex;
+    gap: 24px;
+    color: #f4d03f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.pricing-section {
+    padding: 80px 60px 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.pricing-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-header .subtitle {
+    display: inline-block;
+}
+
+.pricing-desc {
+    color: #a0a0a0;
+    font-size: 14px;
+    max-width: 500px;
+    margin: 20px auto 30px;
+    line-height: 1.6;
+}
+.pricing-toggle {
+    display: inline-flex;
+    background: #2a2a2a;
+    border-radius: 50px;
+    padding: 4px;
+    gap: 4px;
+}
+
+.pricing-period-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.toggle-btn {
+    display: block;
+    background: transparent;
+    color: #a0a0a0;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#monthly:checked ~ .pricing-header label[for="monthly"],
+#yearly:checked ~ .pricing-header label[for="yearly"] {
+    background: #f4d03f;
+    color: #000;
+}
+
+.toggle-btn:hover {
+    color: #ffffff;
+}
+
+#monthly:checked ~ .pricing-header label[for="monthly"]:hover,
+#yearly:checked ~ .pricing-header label[for="yearly"]:hover {
+    color: #000;
+}
+
+#monthly:focus-visible ~ .pricing-header label[for="monthly"],
+#yearly:focus-visible ~ .pricing-header label[for="yearly"] {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.yearly-price,
+.yearly-period {
+    display: none;
+}
+
+#yearly:checked ~ .pricing-grid .monthly-price,
+#yearly:checked ~ .pricing-grid .monthly-period {
+    display: none;
+}
+
+#yearly:checked ~ .pricing-grid .yearly-price,
+#yearly:checked ~ .pricing-grid .yearly-period {
+    display: inline;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+.pricing-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.pricing-card.featured {
+    background: #f4d03f;
+    color: #000;
+    border-color: #f4d03f;
+}
+.badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #000;
+    color: #f4d03f;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 3px;
+}
+.pricing-card-header {
+    margin-bottom: 8px;
+}
+
+.pricing-title {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.pricing-subtitle {
+    color: #a0a0a0;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.featured .pricing-subtitle {
+    color: rgba(0,0,0,0.7);
+}
+.pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 28px;
+}
+
+.currency {
+    font-size: 20px;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.amount {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.period {
+    color: #a0a0a0;
+    font-size: 13px;
+}
+
+.featured .period {
+    color: rgba(0,0,0,0.7);
+}
+.pricing-features {
+    flex: 1;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pricing-features li {
+    font-size: 13px;
+    color: #a0a0a0;
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.featured .pricing-features li {
+    color: rgba(0,0,0,0.8);
+}
+
+.pricing-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #f4d03f;
+    font-weight: 900;
+    font-size: 13px;
+}
+
+.featured .pricing-features li::before {
+    color: #000;
+}
+.pricing-btn {
+    display: block;
+    text-align: center;
+    padding: 14px 20px;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.pricing-btn:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+.featured .pricing-btn {
+    background: #000;
+    color: #f4d03f;
+    border-color: #000;
+}
+
+.featured .pricing-btn:hover {
+    background: #222;
+}
+@media (max-width: 1024px) {
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .section-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .programs-section,
+    .pricing-section {
+        padding: 50px 24px;
+    }
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+    .program-card {
+        min-height: 400px;
+    }
+    .amount {
+        font-size: 44px;
+    }
+    .toggle-btn {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}
