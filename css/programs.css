@@ -226,3 +226,32 @@ ul {
 .featured .pricing-subtitle {
     color: rgba(0,0,0,0.7);
 }
+.pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 28px;
+}
+
+.currency {
+    font-size: 20px;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.amount {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.period {
+    color: #a0a0a0;
+    font-size: 13px;
+}
+
+.featured .period {
+    color: rgba(0,0,0,0.7);
+}
