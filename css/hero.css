@@ -5,7 +5,8 @@ h1,h2{
     color: aliceblue;
     font-family: 'Anton', sans-serif;
 }
-p{
+
+.paragraphe{
     color: aliceblue;
     font-size: 13px;
 }
@@ -235,7 +236,7 @@ p{
         height: 28px;
 }
 .titre-texte{
-    font-size: 15px;
+    font-size: 30px;
 }
 .droite-main {
         position: static;
@@ -261,6 +262,23 @@ p{
 .texte-droite-bas{
     width: 50%;
 }
+.bouton  {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 800;
+}
+.marquee-direction {
+        width: 103%;
+        height: 40px;
+    }
 
+}
+.marquee{
+    height: 40px;
+    gap:20px;
+}
+.marquee span {
+    gap: 20px;
 }
 
