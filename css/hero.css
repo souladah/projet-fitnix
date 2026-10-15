@@ -140,6 +140,9 @@ h3{
     grid-column: span 2;
     align-self: center;
 }
+.soustitre{
+    color:#FFE14D;
+}
 
 .titre-header{
     font-size: 50px;
@@ -206,13 +209,13 @@ h3{
     width: 100%;
 }
     h1,h2{
-    font-size:30px;
+    font-size:40px;
     color: aliceblue;
     font-family: 'Anton', sans-serif;
 }
 .paragraphe{
     color: aliceblue;
-    font-size: 10px;
+    font-size: 18px;
     margin-top: 30px;
 }
 .conteneur {
@@ -269,8 +272,8 @@ h3{
 }
 
 .texte-droite-bas{
-    width: 40%;
-    font-size: 10px;
+    width: 70%;
+    font-size: 15px;
     color: aliceblue;
 }
 .bouton  {
@@ -280,7 +283,7 @@ h3{
   font-weight: 800;
 }
 .marquee-direction {
-        width: 80%;
+        width: 96%;
         height: 40px;
         margin-right: 0;
     }
@@ -291,6 +294,63 @@ h3{
 .marquee span {
     gap: 20px;
 }
+.trainers-section {
+    width: 100%;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2px;
+  }
+
+  .trainers-header {
+    margin-left: 0;
+  }
+
+  .soustitre {
+    margin: 0 0 8px;
+    font-size: 14px;
+  }
+
+  .titre-header {
+    margin: 0;
+    font-size: 37px;
+  }
+
+  .trainers-description {
+    grid-column: 1 / -1;
+    width: 70%;
+    justify-content: flex-start;
+  }
+
+  .header-p {
+    max-width: 100%;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .carte {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .carte img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .carte h3 {
+    margin:0;
+    font-size: 16px;
+  }
+
+  .carte p {
+    margin: 0;
+    font-size: 14px;
+  }
+
 }
+
 
 
