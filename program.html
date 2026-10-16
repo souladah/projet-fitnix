@@ -3,25 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-      name="description"
-      content="Fit Nix, salle de sport à Casablanca : musculation, yoga, cardio et boxe fitness avec des coachs diplômés. Réservez votre cours d'essai gratuit."
-    />
-    <title>Fit Nix | Salle de sport à Casablanca</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="./css/navigation.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/hero.css">
-    <script src="./nav.js" defer></script>
-</head>
-<body class="page-home">
+    <title>Programs &amp; Pricing | FitNix</title>
+    <link rel="stylesheet" href="./css/programs.css">
+<link rel="stylesheet" href="./css/navigation.css"><link rel="stylesheet" href="./css/footer.css"><script src="./js/script.js" defer></script></head>
+<body class="page-programs">
 <nav class="navbar" aria-label="Main navigation">
         <a href="./index.html" class="logo" aria-label="FitNix home">
             <span class="logo-icon">F</span>
@@ -46,7 +31,188 @@
             <a href="./contact.html" class="btn-contact">CONTACT US</a>
         </div>
     </nav>
-    
+   <section class="programs-section">
+    <div class="section-header">
+        <div class="header-left">
+            <p class="subtitle">— Our Programs</p>
+            <h1 class="section-title">Train the way<br>you want to</h1>
+        </div>
+        <div class="header-right">
+            <p>From your first squat to your first competition, pick a program built around your goals and your pace.</p>
+        </div>
+    </div>
+
+    <div class="programs-grid">
+
+        <article class="program-card">
+            <span class="program-number">01</span>
+            <img src="image/woman-barbell-squat-175x263.jpg" alt="Strength Training" class="program-bg">
+            <div class="program-content">
+                <h3 class="program-title">Strength Training</h3>
+                <p class="program-desc">Progressive lifting plans to build real, lasting muscle.</p>
+                <div class="program-meta">
+                    <span>60 min</span>
+                    <span>All Levels</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="program-card">
+            <span class="program-number">02</span>
+            <img src="image/woman-leg-press-350x233.jpg" alt="HIIT & Cardio" class="program-bg">
+            <div class="program-content">
+                <h3 class="program-title">HIIT &amp; Cardio</h3>
+                <p class="program-desc">High-energy sessions that torch fat and build endurance.</p>
+                <div class="program-meta">
+                    <span>45 min</span>
+                    <span>Intermediate</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="program-card">
+            <span class="program-number">03</span>
+            <img src="image/dumbbell-rack-closeup-350x227.jpg" alt="Body Recomp" class="program-bg">
+            <div class="program-content">
+                <h3 class="program-title">Body Recomp</h3>
+                <p class="program-desc">Lose fat and gain muscle with training plus nutrition.</p>
+                <div class="program-meta">
+                    <span>12 Weeks</span>
+                    <span>Coached</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="program-card">
+            <span class="program-number">04</span>
+            <img src="image/ez-curl-bar-rack-175x263.jpg" alt="Functional Fitness" class="program-bg">
+            <div class="program-content">
+                <h3 class="program-title">Functional Fitness</h3>
+                <p class="program-desc">Mobility, core and power for everyday performance.</p>
+                <div class="program-meta">
+                    <span>50 min</span>
+                    <span>Beginner</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<section class="pricing-section">
+    <input class="pricing-period-radio" type="radio" name="pricing-period" id="monthly" checked>
+    <input class="pricing-period-radio" type="radio" name="pricing-period" id="yearly">
+
+    <div class="pricing-header">
+        <p class="subtitle">— Pricing Plan</p>
+        <h2 class="section-title">Choose your plan</h2>
+        <p class="pricing-desc">Choose a plan that fits your goals, schedule, and lifestyle — we've got an option for you.</p>
+
+        <div class="pricing-toggle">
+            <label class="toggle-btn" for="monthly">Monthly</label>
+            <label class="toggle-btn" for="yearly">Yearly - Save 20%</label>
+        </div>
+    </div>
+
+    <div class="pricing-grid">
+
+        <article class="pricing-card">
+            <div class="pricing-card-header">
+                <h3 class="pricing-title">Starter Plan</h3>
+                <p class="pricing-subtitle">A simple, affordable entry into fitness.</p>
+            </div>
+
+            <div class="pricing-price">
+                <span class="currency">$</span>
+                <span class="amount">
+                    <span class="monthly-price">29</span>
+                    <span class="yearly-price">23.20</span>
+                </span>
+                <span class="period">
+                    <span class="monthly-period">/month</span>
+                    <span class="yearly-period">/month, billed annually</span>
+                </span>
+            </div>
+
+            <ul class="pricing-features">
+                <li>Gym access during off-peak hours</li>
+                <li>2 group fitness classes per month</li>
+                <li>One-time fitness assessment</li>
+                <li>Access to workout tracking app</li>
+                <li>Community group support</li>
+                <li>Month-to-month billing, cancel anytime</li>
+            </ul>
+
+            <a href="#" class="pricing-btn">Get Started</a>
+        </article>
+
+        <article class="pricing-card featured">
+            <span class="badge">Most Popular</span>
+
+            <div class="pricing-card-header">
+                <h3 class="pricing-title">Pro Plan</h3>
+                <p class="pricing-subtitle">For regular gym-goers aiming to level up.</p>
+            </div>
+
+            <div class="pricing-price">
+                <span class="currency">$</span>
+                <span class="amount">
+                    <span class="monthly-price">53</span>
+                    <span class="yearly-price">42.40</span>
+                </span>
+                <span class="period">
+                    <span class="monthly-period">/month</span>
+                    <span class="yearly-period">/month, billed annually</span>
+                </span>
+            </div>
+
+            <ul class="pricing-features">
+                <li>Unlimited 24/7 gym access</li>
+                <li>8 group fitness classes/month</li>
+                <li>Personalized workout program</li>
+                <li>Progress tracking &amp; analytics</li>
+                <li>Priority class booking</li>
+                <li>Monthly check-ins with a coach</li>
+            </ul>
+
+            <a href="#" class="pricing-btn">Get Started</a>
+        </article>
+
+        <article class="pricing-card">
+            <div class="pricing-card-header">
+                <h3 class="pricing-title">Elite Membership</h3>
+                <p class="pricing-subtitle">All-in access for serious transformation.</p>
+            </div>
+
+            <div class="pricing-price">
+                <span class="currency">$</span>
+                <span class="amount">
+                    <span class="monthly-price">99</span>
+                    <span class="yearly-price">79.20</span>
+                </span>
+                <span class="period">
+                    <span class="monthly-period">/month</span>
+                    <span class="yearly-period">/month, billed annually</span>
+                </span>
+            </div>
+
+            <ul class="pricing-features">
+                <li>Everything in Pro Plan</li>
+                <li>2 personal training sessions/month</li>
+                <li>Nutrition planning &amp; coaching</li>
+                <li>Full body composition analysis</li>
+                <li>Exclusive workshops &amp; VIP events</li>
+                <li>Direct messaging with your coach</li>
+                <li>Premium customer support</li>
+            </ul>
+
+            <a href="#" class="pricing-btn">Get Started</a>
+        </article>
+
+    </div>
+
+</section>
 <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-col">
