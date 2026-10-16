@@ -1,0 +1,441 @@
+body.page-about {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.page-about main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 64px 40px 80px;
+}
+
+.page-about .about-section,
+.page-about .why-section {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    align-items: center;
+    gap: 56px;
+}
+
+.page-about .image,
+.page-about .imagee {
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 440px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.page-about .image img,
+.page-about .imagee img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 440px;
+    object-fit: cover;
+}
+
+.page-about .prin,
+.page-about .totale {
+    min-width: 0;
+}
+
+.page-about .about-label {
+    margin-bottom: 12px;
+    color: #f4d03f;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.page-about .big-title h1,
+.page-about .big-titlee h2 {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.page-about .big-title > .about-text,
+.page-about .big-titlee > .about-text {
+    max-width: 600px;
+    margin-bottom: 32px;
+    color: #b5b5b5;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.page-about .icons-div,
+.page-about .why-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.page-about .title-min,
+.page-about .title-minn {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 6px;
+}
+
+.page-about .title-min i,
+.page-about .title-minn i,
+.page-about .why-feature i {
+    grid-row: 1 / 3;
+    display: flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #f4d03f;
+    border-radius: 50%;
+    color: #f4d03f;
+    font-size: 16px;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-about .title-min i:hover,
+.page-about .title-minn i:hover,
+.page-about .why-feature i:hover {
+    background: #f4d03f;
+    color: #000;
+    box-shadow: 0 0 18px rgba(244, 208, 63, 0.45);
+}
+
+.page-about .title-min h3,
+.page-about .title-minn h3,
+.page-about .why-feature h3 {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.page-about .title-min p,
+.page-about .title-minn p {
+    color: #b5b5b5;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.page-about .button {
+    margin-top: 32px;
+}
+
+.page-about .submit-button {
+    display: inline-block;
+    max-width: 100%;
+    padding: 15px 28px;
+    border: 1px solid #f4d03f;
+    border-radius: 3px;
+    background: #f4d03f;
+    color: #000;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.page-about .submit-button:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    border-color: #fff;
+}
+
+.page-about .submit-button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+}
+
+.page-about .why-section {
+    margin-top: 96px;
+}
+
+.page-about .why-feature {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.page-about .why-feature i {
+    grid-row: auto;
+}
+
+.page-about .stats-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 96px;
+}
+
+.page-about .stat-card {
+    position: relative;
+    min-width: 0;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #1a1a1a;
+}
+
+.page-about .stat-card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient( 0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.08) 85% );
+    content: "";
+    pointer-events: none;
+}
+
+.page-about .stat-card img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.page-about .info {
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+}
+
+.page-about .info p {
+    max-width: 320px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.page-about .info h2 {
+    margin-top: 8px;
+    color: #f4d03f;
+    font-size: 48px;
+    line-height: 1;
+}
+
+@media (max-width: 900px) {
+    .page-about main {
+        padding: 48px 28px 64px;
+    }
+
+    .page-about .about-section,
+    .page-about .why-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .page-about .image,
+    .page-about .imagee {
+        min-height: 380px;
+    }
+
+    .page-about .image img,
+    .page-about .imagee img {
+        min-height: 380px;
+    }
+
+    .page-about .icons-div {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .page-about .why-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .page-about .stats-section {
+        gap: 14px;
+    }
+
+    .page-about .stat-card,
+    .page-about .stat-card img {
+        min-height: 240px;
+        height: 260px;
+    }
+
+    .page-about .info {
+        right: 14px;
+        bottom: 16px;
+        left: 14px;
+    }
+
+    .page-about .info p {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .page-about main {
+        width: 100%;
+        padding: 32px 16px 48px;
+    }
+
+    .page-about .about-section,
+    .page-about .why-section {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .page-about .about-section .image {
+        order: 0;
+    }
+
+    .page-about .prin {
+        order: 1;
+    }
+
+    .page-about .image,
+    .page-about .imagee {
+        width: 100%;
+        height: 300px;
+        min-height: 0;
+        margin: 0;
+    }
+
+    .page-about .image img,
+    .page-about .imagee img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+    }
+
+    .page-about .big-title h1,
+    .page-about .big-titlee h2 {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+
+    .page-about .big-title > .about-text,
+    .page-about .big-titlee > .about-text {
+        margin-bottom: 24px;
+        font-size: 14px;
+    }
+
+    .page-about .icons-div,
+    .page-about .why-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .page-about .title-min h3,
+    .page-about .title-minn h3,
+    .page-about .why-feature h3 {
+        font-size: 12px;
+    }
+
+    .page-about .why-section {
+        margin-top: 64px;
+    }
+
+    .page-about .imagee {
+        height: 300px;
+    }
+
+    .page-about .stats-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 64px;
+    }
+
+    .page-about .stat-card {
+        width: 100%;
+        height: 260px;
+        min-height: 260px;
+    }
+
+    .page-about .stat-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+    }
+
+    .page-about .info {
+        right: 16px;
+        bottom: 16px;
+        left: 16px;
+    }
+
+    .page-about .info p {
+        max-width: 100%;
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .page-about .info h2 {
+        font-size: 42px;
+    }
+
+    .page-about .button {
+        margin-top: 24px;
+    }
+
+    .page-about .submit-button {
+        padding: 14px 18px;
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .page-about main {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .page-about .big-title h1,
+    .page-about .big-titlee h2 {
+        font-size: 27px;
+    }
+
+    .page-about .title-min,
+    .page-about .title-minn,
+    .page-about .why-feature {
+        grid-template-columns: 38px 1fr;
+        column-gap: 10px;
+    }
+
+    .page-about .title-min i,
+    .page-about .title-minn i,
+    .page-about .why-feature i {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .page-about .info p {
+        font-size: 13px;
+    }
+
+    .page-about .info h2 {
+        font-size: 38px;
+    }
+
+}
