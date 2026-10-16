@@ -1,98 +1,114 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar FitNix</title>
-    <link rel="stylesheet" href="./css/navigation.css">
-    <link rel="stylesheet" href="./css/footer.css"> 
-</head>
-<body>
-    
-    <nav class="navbar">
-        <div class="logo">
-            <div class="logo-icon">F</div>
-            <span class="logo-text">FitNix</span>
-        </div>
+    <meta
+      name="description"
+      content="Fit Nix, salle de sport à Casablanca : musculation, yoga, cardio et boxe fitness avec des coachs diplômés. Réservez votre cours d'essai gratuit."
+    />
+    <title>Fit Nix | Salle de sport à Casablanca</title>
 
-        <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Program</a></li>
-            <li><a href="#">Trainers</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Testimonial</a></li>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/navigation.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <script src="./nav.js" defer></script>
+</head>
+<body class="page-home">
+<nav class="navbar" aria-label="Main navigation">
+        <a href="./index.html" class="logo" aria-label="FitNix home">
+            <span class="logo-icon">F</span>
+            <span class="logo-text">FitNix</span>
+        </a>
+
+        <ul class="nav-links" id="main-menu">
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./program.html">Programs</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
 
+        <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-controls="main-menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <div class="nav-action">
-            <a href="#" class="btn-contact">CONTACT US</a>
+            <a href="./contact.html" class="btn-contact">CONTACT US</a>
         </div>
     </nav>
-
-    <footer>
-        <div class="container">
-            <div class="logo-con">
+    
+<footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
                 <div class="logo">
-                <div class="logo-icon">F</div>
-            <span class="logo-text">FitNix</span>
+                    <span class="logo-icon">F</span>
+                    <span class="logo-text">FitNix</span>
                 </div>
-                <p>Science-backend training, expert coaching 
-                   and a community that never lets you quit
-                </p>
-                <div class ="logos">
-                    <a>IG</a>
-                    <a>FB</a>
-                    <a>X</a>
-                    <a>YT</a>
-                    <a>TT</a>
+                <p>Science-backed training, expert coaching and a community that never lets you quit.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="Facebook">FB</a>
+                    <a href="#" aria-label="X">X</a>
+                    <a href="#" aria-label="YouTube">YT</a>
+                    <a href="#" aria-label="TikTok">TT</a>
                 </div>
             </div>
-            
 
-            <div class="explore-con">
+            <div class="footer-col">
                 <h2>EXPLORE</h2>
-                    <nav class="explore-nav">
-                    <a>About</a>
-                    <a>Programs</a>
-                    <a>Trainers</a>
-                    <a>Pricing</a>
-                    <a>Testimonials</a>
-                    </nav>
-            </div>
-            <div class="hours-con">
-                
-                    <h2>HOURS</h2>
-                    <nav class="hours-nav">
-                    <ul>
-                        <li>Mon-Fri 6am-10pm</li>
-                        <li>Saturday 7am-9pm</li>
-                        <li>Sunday 8am-8pm</li>
-                        <li class="4th">24/7 for Pro & Elite</li>
+                <nav aria-label="Footer navigation">
+                    <ul class="footer-list">
+                        <li><a href="./index.html" class="active">Home</a></li>
+                        <li><a href="./program.html">Programs</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="sell-con">
+
+            <div class="footer-col">
+                <h2>HOURS</h2>
+                <ul class="footer-list">
+                    <li>Mon-Fri 6am-10pm</li>
+                    <li>Saturday 7am-9pm</li>
+                    <li>Sunday 8am-8pm</li>
+                    <li>24/7 for Pro &amp; Elite</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
                 <h2>NEWSLETTER</h2>
                 <p>Weekly workouts, recipes and members offers</p>
-                    <form class="footer-form">
-                    <input class="setter-inp" placeholder="Your Email">
-                    <button class="but font-but">JOIN</button>
-                    </form>
+                <form class="footer-form">
+                    <input type="email" name="newsletter-email" placeholder="Your Email" aria-label="Your email" required>
+                    <button type="submit" class="footer-btn">JOIN</button>
+                </form>
             </div>
-            </div>
-            <div class="footer-title">
-                <h2>FITNIX</h2>
-            </div>
-            <hr>
-            <div class="footer-bottom">
-            <span>© 2026 FitNix. All rights reserved.</span>
-            <div class="p-bottom">
-                <p>Privacy Policy</p>
-                <p>Terms of Service</p>
-                <p>Cookies</p>
-            </div>
-            </div>
-    </footer>
-    
+        </div>
 
+        <div class="footer-title" aria-hidden="true">
+            <h2>FITNIX</h2>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <span>&copy; 2026 FitNix. All rights reserved.</span>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
