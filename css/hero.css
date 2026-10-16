@@ -42,7 +42,7 @@ h3{
 }
 .gauche-main{
     padding: 5px;
-    width: 100%;
+    width: 50%;
     
 }
 .petite-texte{
@@ -72,8 +72,10 @@ h3{
     height: 30px;
     object-fit: cover;
     border-radius: 40px;
-    margin-left: -10px;
-    margin-right: -10px;
+}
+
+.img-laut{
+    display: flex;
 }
 
 
@@ -108,6 +110,7 @@ h3{
     color: aliceblue;
     font-size: 15px;
 }
+
 .bouton  {
   display: inline-block;
   margin-top: 16px;
