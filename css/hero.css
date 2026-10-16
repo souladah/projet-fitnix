@@ -17,13 +17,13 @@ h3{
     font-family: 'Anton', sans-serif;
 }
 
-.background{
+.page-home{
     background-image: url("../image/fitnix-hero-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    max-width: 100vh;
+    background-color: #0e0e0e;
 }
 .etoile{
     color:#FFE14D;
@@ -36,6 +36,7 @@ h3{
     justify-content: space-between;
     align-items: flex-end; 
     gap: 30px;
+    margin: 0 auto;
 }
 .gauche-main{
     padding: 5px;
@@ -52,6 +53,8 @@ h3{
 }
 .image-texte{
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
     width: 100%;
 }
@@ -73,23 +76,17 @@ h3{
 
 
 .droite-main{ 
-    top: 90px;
-    right: 20px;
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
     width: 250px;
     min-height: 400px;
-    max-height: 500px;
     padding: 5px;
-    
+    gap: 25px;
+    flex: 0 0 260px;
 }
 
 .texte-droite-top {
-    width: auto;
-    color: aliceblue;
     padding: 10px;
     
 }
@@ -97,7 +94,6 @@ h3{
 .border-text-droite{
     border-left: 2px solid #58585f ;
     padding: 15px;
-    color: aliceblue;
 }
 
 .border-text-droite strong {
@@ -111,21 +107,19 @@ h3{
 }
 .bouton  {
   display: inline-block;
+  margin-top: 16px;
   padding: 14px 28px;
   border-radius: 8px;
+  border: 1px solid #ffe14d;
   font-size: 16px;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
-}
-
-.bouton-principal {
-  background-color: #FFE14D;
-  border: 1px solid  #FFE14D;
   color: #0c0c0c;
+  background-color: #ffe14d;
+  transition: transform 0.2s ease;
 }
 .bouton-principal:hover {
-  background-color:  #FFE14D;
   transform: scale(1.05);
 }
 .trainers-section{
@@ -186,33 +180,24 @@ h3{
     color:#FFE14D;
 }
 .marquee-direction {
-    width: 100%;
-    min-width: 100vw;
-    box-sizing: border-box;
     height: 40px;
     background-color: #FFE14D;
     margin: 30px 0;
-    margin-left: -8px;
+    overflow: hidden;
 }
-.marquee-direction marquee {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.marquee{
-    display: flex;
-    align-items: center;
-    width: max-content;
-    min-width: 100%;
+.page-home .marquee {
     height: 40px;
-    gap: 40px;
-    white-space: nowrap;
+    line-height: 40px;
 }
-.marquee span {
-    flex: 0 0 auto;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+
+.page-home .marquee span {
+    margin: 0 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0c0c0c;
 }
+
 
 @media (max-width: 768px) {
 html, body {
