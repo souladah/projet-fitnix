@@ -2,6 +2,40 @@
   box-sizing: border-box;
 }
 
+#faq {
+  padding: 70px 0;
+}
+
+.faq-intro {
+  flex: 1;
+  min-width: 0;
+}
+
+.questions {
+  min-width: 0;
+}
+
+.questions summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.questions summary::-webkit-details-marker {
+  display: none;
+}
+
+.questions summary::after {
+  content: "+";
+  flex-shrink: 0;
+}
+
+.questions details[open] summary::after {
+  content: "−";
+}
 body {
   margin: 0;
   background-color: #0e0e0e;
@@ -29,7 +63,7 @@ p {
 }
 
 #contact {
-  width: 96%;
+  width: 96%; margin-inline: auto;
  
   padding: 70px 0;
   background-image: linear-gradient(
@@ -69,11 +103,15 @@ p {
 }
 
 .contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-top: 25px;
 }
 
 .contact-info p {
   color: white;
+  margin: 0;
 }
 
 .contact-info a {
@@ -196,16 +234,6 @@ p {
 
 .questions details[open] summary::after {
   content: "−";
-}
-
-.contact-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.contact-info p {
-  margin: 0;
 }
 
 .contact-icone {
@@ -387,4 +415,20 @@ p {
   .questions p {
     font-size: 14px;
   }
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #ffe14d;
+}
+
+.contact-info a:hover {
+  color: #ffe14d;
+}
+
+input,
+select,
+textarea {
+  font-size: 16px;
 }
